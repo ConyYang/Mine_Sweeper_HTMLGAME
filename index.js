@@ -1,5 +1,6 @@
 var jms = null, timeHandle = null;
 window.onload = function () {
+    console.log('here');
     var radios = document.getElementsByName("level");
     for (var i=0, j=radios.length; i<j; i++)
     {
@@ -27,4 +28,20 @@ function init(rowCount, colCount, minLandMineCount, maxLandMineCount){
         landMineCountElement.innerHTML = 0;
     }
     jms = JMS("landmine", rowCount, colCount, minLandMineCount, maxLandMineCount);
+
+    jms.endCallBack = function () {
+      clearInterval(timeHandle);
+    };
+    jms.landMineCallBack = function (count) {
+      landMineCountElement.innerHTML = count;
+    };
+
+    beginButton.onclick = function () {
+      jms.play();
+      landMineCountElement.innerHTML = jms.landMineCount;
+      jms.begin();
+      timeHandle = setInterval(function () {
+        timeshow.innerHTML = parseInt((new Date() - jms.beginTime) / 1000);
+      }, 1000);
+    };
 }
