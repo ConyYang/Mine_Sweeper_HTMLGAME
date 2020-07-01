@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mine Sweeper</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+<body>
+    <div id="JMS_main" class="main">
+        <table id="landmine"></table>
+        <div id="operation">
+
+            <div class="tip">
+                Mine Remained: <span class="light red" id="landMineCount">0</span>
+            </div> <!--tip1-->
+            <div class="tip">
+                Time Consumed: <span class="light f60" id="costTime">0</span>sec
+            </div>
+
+            <fieldset>
+                <legend>Level Choice: </legend>
+                <input type="radio" name="level" id="llevel" checked="checked" value="10"/>
+                <label for="llevel">Primary</label><br />
+                <input type="radio" name="level" id="mlevel" checked="checked" value="15"/>
+                <label for="llevel">Middle</label><br />
+                <input type="radio" name="level" id="hlevel" checked="checked" value="20"/>
+                <label for="llevel">Hard</label><br />
+            </fieldset>
+
+            <input type="button" id="begin" value="Start Game"/><br/>
+
+            <div class="tip txtleft">
+                Game Tips:
+                <ul>
+                    <li>1. Click "StartGame" and time will start counting</li>
+                    <li>2. In progress of Game you click "StartGame" will start a new Game</li>
+                </ul>
+            </div><!--tip left-->
+
+        </div><!--operation-->
+    </div> <!-- main-->
+
+    <script src="jms.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
