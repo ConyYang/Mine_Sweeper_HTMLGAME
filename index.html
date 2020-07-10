@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <title>Mine Sweeper</title>
     <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" href = "bootstrap.min.css">
 </head>
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Mine Sweeper</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    </nav>
+
     <div id="JMS_main" class="main">
         <table id="landmine"></table>
         <div id="operation">
-
             <div class="tip">
                 Mine Remained: <span class="light red" id="landMineCount">0</span>
             </div> <!--tip1-->
@@ -26,17 +34,18 @@
                 <input type="radio" name="level" id="hlevel" checked="checked" value="20"/>
                 <label for="llevel">Hard</label><br />
             </fieldset>
+<!--            <input type="button" id="begin" value="Start Game"/><br/>-->
 
-            <input type="button" id="begin" value="Start Game"/><br/>
+            <div class="card border-primary mb-3" style="max-width: 20rem;">
+                  <div class="card-header">Read this before start</div>
+                  <div class="card-body">
+                    <h4 class="card-title">Game Tips</h4>
+                    <p class="card-text">1. Click "StartGame" and time will start counting</p>
+                      <p class="card-text">2. In progress of Game you click "StartGame" will start a new Game</p>
+                  </div>
+            </div>
 
-            <div class="tip txtleft">
-                Game Tips:
-                <ul>
-                    <li>1. Click "StartGame" and time will start counting</li>
-                    <li>2. In progress of Game you click "StartGame" will start a new Game</li>
-                </ul>
-            </div><!--tip left-->
-
+            <button id = "begin"class="btn btn-primary btn-lg">Start Game</button>
         </div><!--operation-->
     </div> <!-- main-->
 

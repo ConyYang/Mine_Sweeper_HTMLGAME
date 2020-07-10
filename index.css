@@ -1,17 +1,17 @@
 .main {
-  margin: 10px auto;
+  margin: 100px auto;
   padding: 20px;
-  background: #eee;
-  width: 600px;
+  background: lightcyan;
+  width: 650px;
   zoom: 1;
 }
 .main table {
-  background: #ccc;
+  background: lightblue;
   float: left;
 }
 
 .main table td {
-  border: 2px outset #eee;
+  border: 2px outset lightskyblue;
   font-size: 20px;
   width: 32px;
   height: 32px;
@@ -20,10 +20,10 @@
 }
 
 .main table td:hover {
-  background-color: #aaa;
+  background-color: lightgrey;
 }
 .main #operation {
-  width: 180px;
+  width: 240px;
   float: right;
   text-align: center;
 }
@@ -35,12 +35,12 @@
 }
 
 .main table td.normal {
-  border: 2px solid #eee;
-  background-color: #aaa;
+  border: 2px solid white;
+  background-color: lightsteelblue;
 }
 
 .main table td.normal:hover {
-  background-color: #aaa;
+  background-color: lightskyblue;
 }
 
 .flag {
@@ -73,10 +73,10 @@
   font-size: 30px;
 }
 .main .red {
-  color: red;
+  color: mediumpurple;
 }
 .main .f60 {
-  color: #f60;
+  color: peachpuff;
 }
 .main input[type="button"] {
   padding: 2px 10px;
